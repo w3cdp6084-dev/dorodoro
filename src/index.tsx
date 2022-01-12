@@ -1,11 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Button, Text, Heading, Box, extendTheme, ChakraProvider } from '@chakra-ui/react';
+// import * as React from 'react';
+import { Button, Text, Heading, Box, ChakraProvider } from '@chakra-ui/react';
 import theme from "./theme/theme";
 import './index.scss';
-import { App } from './App';
+// import { App } from './App';
 import { Header } from './Header';
-import reportWebVitals from './reportWebVitals';
+// import reportWebVitals from './reportWebVitals';
+import * as ReactDOM from 'react-dom';
 
 ReactDOM.render(
   <ChakraProvider theme={theme} resetCSS={false}>
