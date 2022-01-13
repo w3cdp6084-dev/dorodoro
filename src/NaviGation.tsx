@@ -1,3 +1,4 @@
+import './header.scss';
 import {
     Box,
     Flex,
@@ -24,14 +25,14 @@ import {
   } from '@chakra-ui/icons';
   import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 
-  
   export default function WithSubnavigation() {
     const { colorMode, toggleColorMode } = useColorMode();
     const { isOpen, onToggle } = useDisclosure();
   
     return (
       <Box>
-        <Flex
+        <Box className='HeaderWrap'>
+        <Flex className='Header'
           bg={useColorModeValue('E3E6EC', 'gray.800')}
           color={useColorModeValue('gray.600', 'white')}
           minH={'100px'}
@@ -40,7 +41,9 @@ import {
           borderBottom={1}
           borderStyle={'solid'}
           borderColor={useColorModeValue('gray.200', 'gray.900')}
-          align={'center'}>
+          align={'center'}
+          >
+          
           <Flex
             flex={{ base: 1, md: 'auto' }}
             ml={{ base: -2 }}
@@ -78,6 +81,7 @@ import {
         <Collapse in={isOpen} animateOpacity>
           <MobileNav />
         </Collapse>
+        </Box>
       </Box>
     );
   }
@@ -235,7 +239,7 @@ import {
   
   const NAV_ITEMS: Array<NavItem> = [
     {
-      label: 'Inspiration',
+      label: '✏️BLOG.',
       children: [
         {
           label: 'Explore Design Work',
@@ -250,7 +254,7 @@ import {
       ],
     },
     {
-      label: 'Find Work',
+      label: '🐱ABOUT.',
       children: [
         {
           label: 'Job Board',
@@ -265,11 +269,7 @@ import {
       ],
     },
     {
-      label: 'Learn Design',
-      href: '#',
-    },
-    {
-      label: 'Hire Designers',
+      label: '📧CONTACT.',
       href: '#',
     },
   ];

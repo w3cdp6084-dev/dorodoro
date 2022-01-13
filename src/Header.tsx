@@ -4,7 +4,7 @@ import NaviGation from './NaviGation';
 export const Header = () => {
     return (
       <>
-        <NaviGation />,
+        <NaviGation />
       </>
     );
 };
