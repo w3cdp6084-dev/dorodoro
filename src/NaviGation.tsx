@@ -12,7 +12,8 @@ import {
     PopoverTrigger,
     PopoverContent,
     useColorModeValue,
-    useBreakpointValue,
+    // useBreakpointValue,
+    useColorMode,
     useDisclosure,
   } from '@chakra-ui/react';
   import {
@@ -21,14 +22,17 @@ import {
     ChevronDownIcon,
     ChevronRightIcon,
   } from '@chakra-ui/icons';
+  import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 
+  
   export default function WithSubnavigation() {
+    const { colorMode, toggleColorMode } = useColorMode();
     const { isOpen, onToggle } = useDisclosure();
   
     return (
       <Box>
         <Flex
-          bg={useColorModeValue('white', 'gray.800')}
+          bg={useColorModeValue('E3E6EC', 'gray.800')}
           color={useColorModeValue('gray.600', 'white')}
           minH={'100px'}
           py={{ base: 2 }}
@@ -50,13 +54,10 @@ import {
               aria-label={'Toggle Navigation'}
             />
           </Flex>
-          <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-            <Text
-              textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-              fontFamily={'heading'}
-              color={useColorModeValue('gray.800', 'white')}>
-            <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="Logo" />
-            </Text>
+          <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }} align={{ base: 'center' }}>
+            <Box w={'48px'}>
+              <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="Logo" />
+            </Box>
 
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
               <DesktopNav />
@@ -68,26 +69,9 @@ import {
             justify={'flex-end'}
             direction={'row'}
             spacing={6}>
-            <Button
-              as={'a'}
-              fontSize={'sm'}
-              fontWeight={400}
-              variant={'link'}
-              href={'#'}>
-              Sign In
-            </Button>
-            <Button
-              display={{ base: 'none', md: 'inline-flex' }}
-              fontSize={'sm'}
-              fontWeight={600}
-              color={'white'}
-              bg={'pink.400'}
-              href={'#'}
-              _hover={{
-                bg: 'pink.300',
-              }}>
-              Sign Up
-            </Button>
+              <Button onClick={toggleColorMode}>
+                {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+              </Button>
           </Stack>
         </Flex>
   
