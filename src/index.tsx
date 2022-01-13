@@ -8,7 +8,7 @@ import { Header } from './Header';
 import * as ReactDOM from 'react-dom';
 
 ReactDOM.render(
-  <ChakraProvider theme={theme} resetCSS={false}>
+  <ChakraProvider theme={theme}>
       <Header />,
       <Box>Hello</Box>
       <Box maxW='32rem'>
