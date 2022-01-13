@@ -30,7 +30,7 @@ import {
         <Flex
           bg={useColorModeValue('white', 'gray.800')}
           color={useColorModeValue('gray.600', 'white')}
-          minH={'60px'}
+          minH={'100px'}
           py={{ base: 2 }}
           px={{ base: 4 }}
           borderBottom={1}
@@ -55,9 +55,9 @@ import {
               textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
               fontFamily={'heading'}
               color={useColorModeValue('gray.800', 'white')}>
-              Logo
+            <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="Logo" />
             </Text>
-  
+
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
               <DesktopNav />
             </Flex>
