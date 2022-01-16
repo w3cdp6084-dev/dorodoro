@@ -6,7 +6,7 @@ import { Header } from './Header';
 import { Footer } from './Footer';
 // import reportWebVitals from './reportWebVitals';
 import * as ReactDOM from 'react-dom';
-import Top from './tsx/views/pages/Top';
+import Top from './Top';
 
 ReactDOM.render(
   <ChakraProvider theme={theme}>

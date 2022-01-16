@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { GridItem, Grid, Box } from '@chakra-ui/react';
-
+import './header.scss';
 class Top extends React.Component {
 
     render() {                          

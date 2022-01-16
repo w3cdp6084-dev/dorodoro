@@ -58,7 +58,7 @@ import {
             />
           </Flex>
           <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }} align={{ base: 'center' }}>
-            <Box w={'48px'}>
+            <Box className='logo'>
               <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="Logo" />
             </Box>
 
