@@ -7,10 +7,26 @@ export const Footer = () => {
       <>
         <Box>
             <ul>
-                <li><a href="">aaaaaa</a></li>
-                <li><a href="">saaaaa</a></li>
-                <li><a href="">aaad</a></li>
-                <li><a href="">aaaaac</a></li>
+                <li>
+                    <a href="">
+                        <img src={`${process.env.PUBLIC_URL}/twitter.svg`} alt="Twitter" />
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src={`${process.env.PUBLIC_URL}/facebook.svg`} alt="Facebook" />
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src={`${process.env.PUBLIC_URL}/dribbble.svg`} alt="Dribbble" />
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src={`${process.env.PUBLIC_URL}/github.svg`} alt="Github" />
+                    </a>
+                </li>
             </ul>
         </Box>
       </>
