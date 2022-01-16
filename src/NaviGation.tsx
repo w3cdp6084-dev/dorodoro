@@ -67,7 +67,7 @@ import {
             </Flex>
           </Flex>
   
-          <Stack
+          <Stack className='switch'
             flex={{ base: 1, md: 0 }}
             justify={'flex-end'}
             direction={'row'}
