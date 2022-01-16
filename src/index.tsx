@@ -2,8 +2,9 @@
 import { Button, Text, Heading, Box, ChakraProvider } from '@chakra-ui/react';
 import theme from "./theme/theme";
 import './index.scss';
-import { Header } from './Header';
-import { Footer } from './Footer';
+import Header from './Header';
+import Footer from './Footer';
+import Pager from './Pager';
 // import reportWebVitals from './reportWebVitals';
 import * as ReactDOM from 'react-dom';
 import Top from './Top';
@@ -23,6 +24,7 @@ ReactDOM.render(
             Create a free account
           </Button>
         </Box>
+        <Pager />
       <Footer />
   </ChakraProvider>,
 

@@ -255,6 +255,7 @@ import {
     },
     {
       label: '🐱ABOUT.',
+      href: '/About',
       children: [
         {
           label: 'Job Board',
@@ -264,7 +265,7 @@ import {
         {
           label: 'Freelance Projects',
           subLabel: 'An exclusive list for contract work',
-          href: '#',
+          href: './About',
         },
       ],
     },
